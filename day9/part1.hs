@@ -1,4 +1,4 @@
-data Game = Game { scores :: [Int] , gamedata :: [Int] }
+data Game = Game { scores :: ![Int] , gamedata :: ![Int] }
 
 magic_turn game player turn =
     let current:newGamedata = (let (lead, tail) = splitAt ((length (gamedata game)) - 7) (gamedata game) in tail ++ lead)
