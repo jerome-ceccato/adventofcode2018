@@ -22,7 +22,7 @@ Day 10: Elixir
 
 Day 11: Java
 
-Day 12:
+Day 12: Rust
 
 Day 13:
 
