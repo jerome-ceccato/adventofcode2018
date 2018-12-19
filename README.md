@@ -20,7 +20,7 @@ Day 09: Haskell
 
 Day 10: Elixir
 
-Day 11:
+Day 11: Java
 
 Day 12:
 
