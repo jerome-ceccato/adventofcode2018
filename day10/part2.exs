@@ -10,7 +10,8 @@ defmodule Object do
   defstruct position: Point, velocity: Point
 
   def new(match) do
-  	coords = Enum.map(tl(match), &String.to_integer(&1))
+    coords = Enum.map(tl(match), &String.to_integer(&1))
+
     %Object{
       position: %Point{x: Enum.at(coords, 0), y: Enum.at(coords, 1)},
       velocity: %Point{x: Enum.at(coords, 2), y: Enum.at(coords, 3)}
@@ -45,24 +46,27 @@ defmodule Main do
   def readFile(filename) do
     {:ok, input} = File.read(filename)
 
-    matches = Regex.scan(~r/position=<\s*(-?\d+),\s*(-?\d+)> velocity=<\s*(-?\d+),\s*(-?\d+)>/, input)
+    matches =
+      Regex.scan(~r/position=<\s*(-?\d+),\s*(-?\d+)> velocity=<\s*(-?\d+),\s*(-?\d+)>/, input)
+
     Enum.map(matches, &Object.new(&1))
   end
 
   def smallestSize(points, current, acc) do
-  	newPoints = Enum.map(points, &Object.advancedBy(&1, 1))
-  	newSize = Object.boundingSize(newPoints)
-  	if newSize.x > current.x || newSize.y > current.y do
-  		acc
-  	else
-  		smallestSize(newPoints, newSize, acc + 1)
-  	end
+    newPoints = Enum.map(points, &Object.advancedBy(&1, 1))
+    newSize = Object.boundingSize(newPoints)
+
+    if newSize.x > current.x || newSize.y > current.y do
+      acc
+    else
+      smallestSize(newPoints, newSize, acc + 1)
+    end
   end
 
   def run() do
     points = readFile("input")
     current = Object.boundingSize(points)
-    IO.puts smallestSize(points, current, 0)
+    IO.puts(smallestSize(points, current, 0))
   end
 end
 
