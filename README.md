@@ -1,51 +1,7 @@
-# Advent of code 2018
-
-Day 01: (python)
-
-Day 02: (python)
-
-Day 03: (python)
-
-Day 04: Python
-
-Day 05: C#
-
-Day 06: C++
-
-Day 07: Go
-
-Day 08: Swift
-
-Day 09: Haskell
-
-Day 10: Elixir
-
-Day 11: Java
-
-Day 12: Rust
-
-Day 13:
-
-Day 14:
-
-Day 15:
-
-Day 16:
-
-Day 17:
-
-Day 18:
-
-Day 19:
-
-Day 20:
-
-Day 21:
-
-Day 22:
-
-Day 23:
-
-Day 24:
-
-Day 25:
+| Advent  of  code  2018 | | | | |
+| ---------- | -------- | -------- | -------- | -------- |
+| [Python](./day01) | [Python](./day02) | [Python](./day03) | [Python](./day04) | [C++](./day05) |
+| [C++](./day06) | [Go](./day07) | [Swift](./day08) | [Haskell](./day09) | [Elixir](./day10) |
+| [Java](./day11) | [Rust](./day12) | ?[](./day13) | ?[](./day14) | ?[](./day15) |
+| ?[](./day16) | ?[](./day17) | ?[](./day18) | ?[](./day19) | ?[](./day20) |
+| ?[](./day21) | ?[](./day22) | ?[](./day23) | ?[](./day24) |? [](./day25) |
